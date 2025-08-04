@@ -2,6 +2,14 @@ name: Build domains_all, ipsum, XRay and Sing-Box Files
 
 on:
   workflow_dispatch: # Allows manual trigger of the workflow
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .idea
+      - .ropeproject
+      - README.md
+      - LICENSE
 
 jobs:
   run-python-scripts:
